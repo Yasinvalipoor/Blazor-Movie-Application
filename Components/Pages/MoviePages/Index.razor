@@ -46,7 +46,7 @@
 
     public async ValueTask DisposeAsync() => await context.DisposeAsync();
 
-    PaginationState state = new PaginationState() { ItemsPerPage = 2 };
+    PaginationState state = new PaginationState() { ItemsPerPage = 5 };
 
     string titleFilter = "";
     IQueryable<Movie> FilteredMovies => context.Movie.Where(movie => movie.Title.Contains(titleFilter));
